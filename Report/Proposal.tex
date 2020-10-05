@@ -1,0 +1,179 @@
+\documentclass{article}[14pt]
+\usepackage[utf8]{vietnam}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{fancyhdr}
+\usepackage{fancybox,framed}
+\linespread{1.2}
+\usepackage{lastpage}
+\usepackage{floatrow}
+\usepackage{floatrow}
+\usepackage{indentfirst}
+\pagenumbering{arabic}
+
+\newfloatcommand{capbtabbox}{table}[][\FBwidth]
+
+\usepackage{blindtext}
+\usepackage{titlesec}
+\usepackage[nottoc]{tocbibind}
+
+
+\titleformat*{\section}{\LARGE\bfseries}
+\titleformat*{\subsection}{\Large\bfseries}
+\titleformat*{\subsubsection}{\large\bfseries}
+
+
+\begin{document}
+	
+	\begin{figure}[h]
+		\begin{floatrow}
+			\ffigbox{\includegraphics[scale = 0.6]{"C:/Users/Asus TUF/Desktop/Logo.png"}}  
+			{%
+				
+			}
+			\capbtabbox{
+				\begin{tabular}{l}
+					\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}TRƯỜNG ĐẠI HỌC KHOA HỌC TỰ NHIÊN\\KHOA CÔNG NGHỆ THÔNG TIN\end{tabular}}} \\ \\ \\
+				\end{tabular}
+			}
+			{%
+				
+			}
+		\end{floatrow}
+	\end{figure}
+	
+	\begin{center}
+		\textbf{\Large ĐỀ CƯƠNG KHOÁ LUẬN TỐT NGHIỆP} \\ 
+	\end{center}
+	
+	%\vspace{.5cm}
+	
+	\begin{center}
+		%Tên đề tài phải VIẾT HOA
+		
+		\textbf{\huge PHÁT HIỆN/ NHẬN DẠNG CÁC LOẠI ĐẤT RUỘNG TỪ ẢNH VỆ TINH } 
+		\\
+		
+		%Tên đề tài bằng tiếng Anh (nếu có)
+		\vspace{.5cm}
+		\textit{\textbf{\Large (Identify and Classify Landmark from Satelite Images)}}
+	\end{center}
+	
+	\vspace{.5cm}
+	
+	\Large
+
+	\section{THÔNG TIN CHUNG}
+	\begin{itemize}[label = {}]
+		
+		\item \textbf{Người hướng dẫn:} 
+		
+		\begin{itemize}
+			\item TS. Nguyễn Đức Hoàng Hạ (Khoa Công nghệ Thông tin)
+		\end{itemize}{}
+		
+		
+		\item \textbf{Sinh viên thực hiện:}
+		
+		\begin{enumerate}
+			
+			\item Nguyễn Đào Vinh Hải (MSSV: 1612165 ) 
+		\end{enumerate}
+		
+		%Chọn loại thích hợp
+		\item \textbf{Loại đề tài:} Nghiên cứu
+		
+		\item \textbf{Thời gian thực hiện:} Từ \textit{09/2020} đến \textit{03/2021}
+		
+		
+	\end{itemize}
+	
+	\section{NỘI DUNG THỰC HIỆN}
+	{
+		
+		%Mỗi mục dưới đây phải viết ít nhất là 5 câu mô tả/giới thiệu.
+		
+		\subsection{Giới thiệu về đề tài}
+		
+		Trong những năm gần đây ảnh vệ tinh được sử dụng vô
+		cùng rộng rãi trong việc thăm dò tài nguyên  cũng như trong nghiên cứu khoa học. Việc thu thập và phân tích  dữ liệu từ hình ảnh vệ tinh có thể giúp theo dõi thiên tai, biến đổi khí hậu, thăm dò khoáng sản. Đặc biệt, ảnh vệ tinh có ứng dụng rất lớn trong ngành nông nghiệp. Cụ thể hơn, từ nhũng hình ảnh này chúng ta có thể phân tích một vùng đất là rừng, ruộng, ao hồ, hay nhà cửa. Thông tin này có thể giúp người nông dân quản lí, chăm sóc và lên kế hoạch sử dụng đất để trồng trọt một cách có hiệu quả hơn. Tuy nhiên, việc trích xuất ảnh vệ tinh một cách thủ công lại tốn rất nhiều thời gian lẫn công sức, vì vệ tinh luôn cập nhật ảnh liên tục nên số lượng ảnh là vô cùng lớn. Do đó, việc phân tích ảnh vệ tinh một cách tự động sử dụng các hệ thống máy tính là vô cùng cần thiết. Cụ thể hơn, khi vệ tinh cập nhật ảnh mới thì những ảnh này sẽ được rút trích đặc trưng (feature extraction) và nhận dạng (recognition) một cách nhanh chóng và tiết kiệm thời gian, đặc biệt trong trường hợp số lượng ảnh lớn. Từ đây, ta có thể thấy rằng việc áp dụng trí tuệ nhân tạo (Artificial Intelligence) để rút trích dữ liệu tự động từ ảnh vệ tinh có ý nghĩa rất lớn trong nghiên cứu khoa học cũng như trong ngành nông nghiệp và nhiều ứng dụng khác. 
+		
+		
+		\subsection{Mục tiêu đề tài}
+		
+		Từ ảnh vệ tinh, chúng ta có thể vẽ đường ranh giới và phân loại giữa các khu vực đất khác nhau như đất ruộng, ao hồ, khu dân cư. Ngoài ra, ảnh vệ tinh còn giúp chúng ta theo dõi vùng đất đó trồng loại cây gì cũng như sự phát triển và tình trạng của loại cây trồng đó. Hơn thế nữa, ảnh vệ tinh còn có thể giúp cho chúng ta biết được môi trường xung quanh ảnh hưởng đến các loài cây trồng như thế nào. Được thúc đẩy bởi nhũng lợi ích vô cùng quan trọng cúa việc phân tích ảnh vệ tinh đối với việc phát triển nông nhiệp, đề tài luận văn này tập trung vào việc phát hiện và phân loại các khu vực đất khác nhau dựa vào mục đích sử dụng từ ảnh vệ tinh bằng việc áp dụng các giải thuật học máy tiên tiến. 
+		
+		\subsection{Phạm vi của đề tài}
+		
+		Từ ảnh vệ tinh, chúng ta có thể thu thập rất nhiều thông tin như là diện tích đất trồng , diện tích đất rừng, ao hồ, mật độ dân cư. Để làm được việc đó, điều quan trọng là tìm ra phương pháp rút trích đặc trưng (feature extraction) của ảnh vệ tinh một cách hiệu quả, chính xác và ít tốn thời gian nhất có thể bằng các giải thuật học máy và xử lý ảnh. Trong phạm vi của đề tài này, phương pháp rút trích đặc trưng của ảnh vệ tinh cho ứng dụng trong nông nghiệp, cụ thể là đánh dấu vùng đất rừng, đất trồng các loại hoa quả, ao hồ, đất dân cư và các vùng đất khác được nghiên cứu và hiện thực. Cụ thể hơn, trong đề tài này, mục đích sử dụng của đất (land use) được chia làm 7 loại: khu dân cư (residental), khu đất trống (soil), đất trồng trọt (cropland), đất đồng cỏ (grassland), đất rừng (forest), traffic (giao thông), những vùng đất khác (others).
+		
+		\subsection{Cách tiếp cận và giải quyết vấn đề dự kiến}
+		
+		Trong những năm gần đây, nhiều nước trên thế giới đã có những công trình nghiên cứu liên quan đến việc sử dụng deep learning để xây hệ thống có thể cùng lúc trích xuất đặc trưng và phân loại đất từ ảnh vệ tinh, ví dụ như:  Stair Vision Labrary (SVL) \cite{svl}, phân loại đất từ ảnh vệ tinh sử dụng VGG-16 hay ResNet-50 \cite{resandvgg}. Nhũng hệ thống này thường phân loại mỗi điểm ảnh (pixel)..., hay còn được gọi là Semantic segmentation. Trong phân loại đất, có hai trường hợp phổ biến là phân loại đất trong land use và trong land cover. Land Use là những phần đất và môi trường tự nhiên được biến đổi thành những khu đất và môi trường xây dựng như khu dân cư hoặc thành môi trường bán tự nhiên như đát trồng trọt, đồng cỏ và rừng được quản lí\cite{landuse}. Land cover là lớp đất phủ trên bề mặt của trái đất bao gồm cỏ (grass), nhựa đường (asphalt), đất trống (bare ground) và nước (water) \cite{landcover}.
+		
+		Trong bài báo \cite{mainpaper}, phương pháp semantic segmentation được dùng để phân loại thuộc tính đất. Cụ thể hơn, neural network LiteNet được áp dụng để phân lớp Land Use. Ở mô hình 1 chúng ta có thể thấy được rằng là tác giả của bài báo \cite{litenet}
+		
+		Do đó hướng tiếp cận dự kiến của đề tài lần này dùng mạng neural network để phân lớp các khu vật đất, cụ thể đó là dùng NU-LiteNet phân loại thuộc tính đất cho Land Use bao gồm: khu dân cư (residental), khu đất trống (soil), đất trồng trọt (cropland), đất đồng cỏ (grassland), đất rừng (forest), traffic (giao thông), những vùng đất khác (others). Ngoài ra, để khắc phục hạn chế về dữ liệu đầu vào, ngoài ảnh có ba kênh màu RGB ra còn cho input ảnh là ảnh LC (ảnh một kênh màu). Từ đó sẽ so sánh độ chính xác giữa ảnh RGB và ảnh LC. 
+		
+		
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale = 0.4]{"C:/Users/Asus TUF/Desktop/NU-LiteNet"}
+			\caption{Mô hình kiến trúc mạng NU-LiteNet so với các mạng neural khác}
+			\label{fig:nu-litenet}
+		\end{figure}
+		
+		
+		\subsection{Kết quả dự kiến của đề tài}
+		
+		Thông qua đề tài, kết quả dự kiến thu được đó là mô hình NU-LiteNet và tập kết quả gồm các ảnh đã đánh dấu các khu vực đất, cụ thể là khu dân cư (residental), khu đất trống (soil), đất trồng trọt (cropland), đất đồng cỏ (grassland), đất rừng (forest), traffic (giao thông), những vùng đất khác (others). Ngoài ra còn có kết quả thực nghiệm bao gồm thời gian chạy chương trình, kết quả về chính xác của ảnh vệ kết quả so với ground truth. So sánh được với các mô hình khác cụ thể là Squeeze net và Google net. Tìm kiếm và thu thập được bộ dữ liệu có sẵn về ảnh vệ tinh có số lượng đủ lớn thích hợp cho việc train model. Có dữ liệu để  hoàn thành cuốn luận văn và báo cáo khóa luận cuối cùng. 
+		
+		\subsection{Kế hoạch thực hiện}
+		* [ 8-2020 ]: Đưa ra kế hoạch thực hiện
+		
+		* [ 1-9-2020 đến 30-9-2020 ]: Tổng hợp các bài báo có liên quan đến luận văn. Đưa ra phương pháp phù hợp. Trao đổi với giáo viên hướng dẫn về Đề cương luận văn.
+		
+		* [10-10-2020]: Hoàn thành Đề cương luận văn
+		
+		* [10-10-2020 đến 13-10-2020]: Trao đổi với giảng viên về đề cương và chỉnh sửa.
+		
+		* [14-10-2020]: Nộp đè cương tốt nghiệp.
+		
+		* [15-10-2020 đến 31-12-2020]: Hoàn tất việc xây dựng mô hình. Thu thập được dữ liệu. So sánh mô hình đã sử dụng trong luận văn với những mô hình khác. Thu kết quả về độ chính xác và thời gian cho luận văn.
+		
+		* [01-2021]: Tổng hợp dữ liệu cần thiết cho luận văn.
+		
+		* [14-02-2021]: Hoàn tất cuốn luận văn.
+		
+		* [15-02-2021 đến 28-02-2021]:Trao đổi với giáo viên hướng dẫn và hoàn thiện cuốn luận văn.
+		
+		* [01-03-2021]: Nộp cuốn luận văn khoa
+		
+		* [Tuần thứ nhất 03-2021]: Chỉnh sửa luận theo yêu cầu của giáo viên phản biện.
+		
+		* [Tuần thứ hai 03-2021]: Báo cáo khóa luận trước hội đồng.
+		
+		* [29-03-2021]: Chỉnh sửa và nộp cuốn khóa luận sau khi bảo vệ.
+		
+	}
+	%TÀI LIỆU TRÍCH DẪN
+	%Đây là ví dụ
+	\bibliographystyle{ieeetr}
+	\bibliography{./reference}
+	\nocite{*}
+	
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{p{7cm}p{7cm}}
+			\textbf{\begin{tabular}[c]{@{}c@{}}\\XÁC NHẬN\\CỦA NGƯỜI HƯỚNG DẪN\\ \textit{(Ký và ghi rõ họ tên)}\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}\textit{TP. Hồ Chí Minh, ....../......./..........}\\NHÓM SINH VIÊN THỰC HIỆN\\\textit{(Ký và ghi rõ họ tên}) \end{tabular}}
+		\end{tabular}
+	\end{table}
+	
+\end{document}
